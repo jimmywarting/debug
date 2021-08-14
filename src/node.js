@@ -2,8 +2,8 @@
  * Module dependencies.
  */
 
-const tty = require('tty');
-const util = require('util');
+import tty from 'tty';
+import util from 'util';
 
 /**
  * This is the Node.js implementation of `debug()`.
@@ -15,10 +15,6 @@ exports.formatArgs = formatArgs;
 exports.save = save;
 exports.load = load;
 exports.useColors = useColors;
-exports.destroy = util.deprecate(
-	() => {},
-	'Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.'
-);
 
 /**
  * Colors.
